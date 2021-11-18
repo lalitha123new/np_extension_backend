@@ -1,0 +1,48 @@
+<breadcrumb></breadcrumb>
+
+<div class="matero-row" fxLayout="row wrap">
+  <div class="matero-col" fxFlex="100">
+    <app-chart-card>
+      <p title>Pending Cases</p>
+      <app-pending-addfilter filter-button></app-pending-addfilter>
+      <div class="matero-col" fxFlex="100" sample-filter>
+        <div class="sample-left">
+          <mat-button-toggle-group
+            name="fontStyle"
+            aria-label="Font Style"
+            value="all"
+            (change)="OnChangeType($event.value)"
+          >
+            <mat-button-toggle value="internal">Internal</mat-button-toggle>
+            <mat-button-toggle value="external">External</mat-button-toggle>
+            <mat-button-toggle value="all">All</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+        <div class="sample-right">
+          <mat-button-toggle-group
+            name="fontStyle"
+            aria-label="Font Style"
+            value="all"
+            (change)="OnChangeParity($event.value)"
+            *ngIf="!allSelected"
+          >
+            <mat-button-toggle value="odd">Odd</mat-button-toggle>
+            <mat-button-toggle value="even">Even</mat-button-toggle>
+            <mat-button-toggle value="all">All</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+      <app-pending-cases-chart chart-content></app-pending-cases-chart>
+    </app-chart-card>
+  </div>
+
+  <div class="matero-col" fxFlex="100">
+    <app-chart-card>
+      <p title>
+        {{ typeSelected | titlecase }} {{ paritySelected | titlecase }} Pending
+        Cases
+      </p>
+      <app-pending-cases-table chart-content></app-pending-cases-table>
+    </app-chart-card>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="calendar" fxFlex="100" fxFlex.gt-sm="100">
+	<mat-card class="mat-elevation-z5">
+		<mat-card-header class="calendar-header">
+			<mat-card-title class="calendar-title"> Event Calendar </mat-card-title>
+		</mat-card-header>
+		<mat-card-content>
+			<full-calendar #calendar [options]="calendarOptions"></full-calendar>
+
+			<div style="margin-top: 30px; text-align: center">
+				<mat-form-field appearance="outline" style="padding-right: 50px">
+					<mat-label> Choose a Date</mat-label>
+					<input
+						matInput
+						[matDatepicker]="myDatePicker3"
+						class="inp"
+						[(ngModel)]="SelectedDate"
+					/>
+					<mat-datepicker-toggle
+						matSuffix
+						[for]="myDatePicker3"
+					></mat-datepicker-toggle>
+					<mat-datepicker #myDatePicker3 color="warn"></mat-datepicker>
+				</mat-form-field>
+
+				<button
+					mat-flat-button
+					color="primary"
+					style="width: 100px; margin-right: 20px"
+					(click)="OnClickingAdd()"
+				>
+					Add
+				</button>
+				<button
+					mat-flat-button
+					color="accent"
+					style="width: 100px; margin-right: 20px"
+					(click)="OnClickingRemove()"
+				>
+					Remove
+				</button>
+				<button
+					mat-flat-button
+					color="warn"
+					style="width: 100px; margin-right: 20px"
+					(click)="OnClickingGoTo()"
+				>
+					GoTo
+				</button>
+			</div>
+		</mat-card-content>
+	</mat-card>
+</div>

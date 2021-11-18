@@ -1,0 +1,15 @@
+<mat-card class="mat-elevation-z3">
+	<mat-card-header>
+		<mat-card-title class="chart-title">
+			<div><ng-content select="[title]"></ng-content></div>
+		</mat-card-title>
+	</mat-card-header>
+	<mat-card-content class="f-s-12 f-w-100">
+          <div>
+               <ng-content select = "[summary-content]"></ng-content>
+          </div>
+          <div>
+               <ng-content select = "[summary-subtitle]"></ng-content>
+          </div>
+	</mat-card-content>
+</mat-card>

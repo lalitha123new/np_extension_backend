@@ -1,0 +1,72 @@
+package com.example.demo.assets;
+
+import java.time.LocalTime;
+
+public class Asset {
+	private long assetId;
+	private String npNumber;
+	private int currentState;
+	private int nextState;
+	private boolean done;
+	private long requestId;
+	private String specimen;
+	private String fixative; 
+	private String biopsyType; 
+	private long assetType;
+	private long typeId; 
+	private String review;
+	private boolean special; 
+	private boolean ncs;
+	private String processStatus; 
+	private String stainName; 
+	private LocalTime createdAt;
+	
+	public Asset() {
+		
+	}
+	
+	public Asset(long assetId, String npNumber, int currentState,
+				int nextState, boolean done, long requestId, String specimen,
+				String fixative, String biopsyType,long assetType,
+				long typeId, String review, boolean special,
+				boolean ncs, String processStatus, String stainName, LocalTime createdAt) {
+		this.assetId = assetId;
+		this.npNumber = npNumber;
+		this.currentState = currentState;
+		this.nextState = nextState;
+		this.done = done;
+		this.requestId = requestId;
+		this.specimen = specimen;
+		this.fixative = fixative;
+		this.biopsyType = biopsyType;
+		this.assetType = assetType;
+		this.typeId = typeId;
+		this.review = review;
+		this.special = special;
+		this.ncs = ncs;
+		this.processStatus = processStatus;
+		this.stainName = stainName;
+		this.createdAt = createdAt;
+	}
+	
+	public long getAssetId() {
+		return this.assetId;
+	}
+	
+	public String getNpNumber() {
+		return this.npNumber;
+	}
+	
+	public int getCurrentState() {
+		return this.currentState;
+	}
+	
+	@Override
+	public String toString() {
+		return "Asset {" + 
+				"assetId = " + this.assetId + 
+				", npNumber = " + this.npNumber +
+				", currentState = " + this.currentState + "}";
+	}
+	
+}

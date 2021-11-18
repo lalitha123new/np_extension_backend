@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Pending Case Information</h1>
+
+<div mat-dialog-content class="dialog-div">
+  <mtx-grid
+    [data]="list"
+    [columns]="columns"
+    [length]="length"
+    [loading]="false"
+    [pageOnFront]="false"
+    [showPaginator]="false"
+    [pageIndex]="0"
+    [pageSize]="length"
+  >
+  </mtx-grid>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button
+    mat-stroked-button
+    mat-dialog-close
+    color="primary"
+    class="dialog-button"
+  >
+    Close
+  </button>
+</div>

@@ -1,0 +1,27 @@
+{
+  "menu": [
+    {
+      "route": "dashboard",
+      "name": "dashboard",
+      "type": "sub",
+      "icon": "dashboard",
+      "children": [
+        {
+          "route": "samples",
+          "name": "sample",
+          "type": "link"
+        },
+        {
+          "route": "tat",
+          "name": "tat",
+          "type": "link"
+        },
+        {
+          "route": "pending-cases",
+          "name": "pending-cases",
+          "type": "link"
+        }
+      ]
+    }
+  ]
+}

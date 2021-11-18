@@ -1,0 +1,71 @@
+{
+  "menu": {
+    "dashboard": "Dashboard",
+    "dashboard.sample": "Sample",
+    "dashboard.tat": "Case Reports",
+    "dashboard.pending-cases": "Pending Cases"
+  },
+  "validations": {
+    "required": "This field is required",
+    "minlength": "Should have atleast {{number}} characters",
+    "maxlength": "This value should be less than {{number}} characters",
+    "min": "This value should be more than {{number}}",
+    "max": "This value should be less than {{number}}",
+    "exist": "The {{value}} has exists",
+    "inconsistent": "Inconsistent with {{value}}",
+    "invalid_email": "Invalid email"
+  },
+  "user": {
+    "profile": "profile",
+    "settings": "settings",
+    "logout": "logout"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "username": "Username",
+    "password": "Password",
+    "remember_me": "Remember Me",
+    "login": "Login",
+    "have_no_account": "Don't have an account",
+    "create_one": "Click here to create one",
+    "please_enter": "Please enter"
+  },
+  "register": {
+    "welcome": "Welcome",
+    "title": "It only takes a few seconds to create your account",
+    "confirm_password": "Confirm Password",
+    "agree": "I have read and agree to the terms of service",
+    "have_an_account": "Already have an account",
+    "register": "Create account"
+  },
+  "paginator": {
+    "items_per_page_label": "Items per page:",
+    "next_page_label": "Next page",
+    "previous_page_label": "Previous page",
+    "first_page_label": "First page",
+    "last_page_label": "Last page",
+    "range_page_label_1": "no record",
+    "range_page_label_2": "{{startIndex}} - {{endIndex}} of {{length}}"
+  },
+  "table_kitchen_sink": {
+    "position": "Position",
+    "name": "Name",
+    "weight": "Weight",
+    "symbol": "Symbol",
+    "gender": "Gender",
+    "mobile": "Mobile",
+    "tele": "Telephone",
+    "birthday": "Birthday",
+    "city": "City",
+    "address": "Address",
+    "website": "Website",
+    "company": "Company",
+    "email": "Email",
+    "operation": "Operation",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm_delete": "Confirm delete?",
+    "ok": "Ok",
+    "close": "Close"
+  }
+}

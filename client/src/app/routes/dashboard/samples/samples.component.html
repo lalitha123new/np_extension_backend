@@ -1,0 +1,30 @@
+<breadcrumb></breadcrumb>
+
+<div class="matero-row" fxLayout="row wrap">
+  <div
+    class="matero-col"
+    fxFlex.gt-sm="25"
+    fxFlex.gt-xs="50"
+    fxFlex="100"
+    *ngFor="let stat of stats"
+  >
+    <mat-card [ngClass]="['text-white', stat.color]">
+      <mat-card-title class="f-s-12 f-w-100"
+        ><h2>{{ stat.title }}</h2></mat-card-title
+      >
+      <mat-card-content>
+        <h1>{{ stat.amount }}</h1>
+
+        <small class="text-muted"
+          ><h3>{{ stat.days }}</h3></small
+        >
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="matero-col" fxFlex="100">
+    <app-chart-card>
+      <app-total-chart chart-content></app-total-chart>
+    </app-chart-card>
+  </div>
+</div>

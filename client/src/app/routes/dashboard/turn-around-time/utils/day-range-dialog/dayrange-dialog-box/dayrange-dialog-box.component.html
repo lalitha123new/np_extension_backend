@@ -1,0 +1,104 @@
+<h1 mat-dialog-title>Add Filters</h1>
+<div mat-dialog-content>
+	<div>
+		<mat-form-field>
+			<mat-label>Start</mat-label>
+			<input
+				matInput
+				type="number"
+				placeholder="Start Limit"
+				min="1"
+				[(ngModel)]="startvalue"
+			/>
+		</mat-form-field>
+
+		<mat-form-field>
+			<mat-label>End</mat-label>
+			<input
+				matInput
+				type="number"
+				placeholder="End Limit"
+				min="1"
+				[(ngModel)]="endvalue"
+			/>
+		</mat-form-field>
+
+		<button mat-raised-button (click)="OnClickingAdd()" color="accent">
+			Add
+		</button>
+		<button mat-raised-button (click)="OnClickingClear()" color="warn">
+			Clear
+		</button>
+	</div>
+
+	<mtx-grid
+		[loading]="isLoading"
+		[data]="rangeFilters"
+		[columns]="columns"
+		[rowHover]="true"
+		[rowStriped]="true"
+		[showToolbar]="true"
+		[toolbarTitle]="'Filters'"
+		[pageOnFront]="true"
+		[showPaginator]="true"
+		[pageSizeOptions]="[5, 10, 50, 100]"
+		[pageIndex]="0"
+		[pageSize]="5"
+		[multiSelectable]="false"
+		[rowSelectable]="false"
+		[hideRowSelectionCheckbox]="false"
+		[columnResizable]="false"
+		[columnHideable]="false"
+		[columnMovable]="false"
+		[expandable]="true"
+	>
+	</mtx-grid>
+
+	<div *ngIf="note.length" style="font-size: small; color: red">
+		{{ note }}
+	</div>
+
+	<!-- <div *ngIf="note1" style="font-size: small; color: red">
+		Note: This filter has already been added.
+	</div>
+
+	<div *ngIf="note2" style="font-size: small; color: red">
+		Note: Add atleast one filter.
+	</div>
+
+	<div *ngIf="note3" style="font-size: small; color: red">
+		Note: Fill in all the details.
+	</div> -->
+</div>
+<div mat-dialog-actions align="end">
+	<button
+		mat-stroked-button
+		mat-dialog-close
+		(click)="onNoClick()"
+		color="primary"
+		class="dialog-button"
+	>
+		Close
+	</button>
+	<button
+		mat-raised-button
+		color="primary"
+		(click)="OnClickingApply()"
+		class="dialog-button"
+	>
+		Apply
+	</button>
+</div>
+
+<!--
+     [multiSelectable]="multiSelectable" 
+     [rowSelectable]="rowSelectable"
+     [hideRowSelectionCheckbox]="hideRowSelectionCheckbox"
+     [columnResizable]="columnResizable"
+     [columnHideable]="columnHideable"
+     [columnMovable]="columnMovable"
+     [expandable]="expandable"
+
+     (sortChange)="changeSort($event)"
+          (selectionChange)="changeSelect($event)"
+-->

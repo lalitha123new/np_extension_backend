@@ -1,0 +1,20 @@
+mat-form-field + mat-form-field
+{
+    margin-left: 30px;
+}
+
+button+button{
+    margin-left: 30px;
+}
+
+mat-form-field+button{
+    margin-left: 30px;
+}
+
+.dialog-button{
+    margin-left: 20px;
+}
+
+mat-stroked-button+mat-raised-button{
+    margin-left: 30px;
+}

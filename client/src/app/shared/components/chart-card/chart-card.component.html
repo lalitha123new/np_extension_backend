@@ -1,0 +1,21 @@
+<mat-card class="mat-elevation-z3">
+	<mat-card-header>
+		<mat-card-title class="chart-title">
+			<div><ng-content select="[title]"></ng-content></div>
+		</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<div style="text-align: right">
+			<ng-content select="[date-range]"></ng-content>
+		</div>
+		<div style = "text-align: right; padding-bottom: 10px;">
+			<ng-content select="[filter-button]"></ng-content>
+		</div>
+		<div style = "padding-bottom: 10px;">
+		<ng-content select="[sample-filter]"></ng-content>
+		</div>
+		<div>
+			<ng-content select = "[chart-content]"></ng-content>
+		</div>
+	</mat-card-content>
+</mat-card>

@@ -1,0 +1,37 @@
+<breadcrumb></breadcrumb>
+
+<!-- Case distribution Chart -->
+<div class="matero-row" fxLayout="row wrap">
+  <div class="matero-col" fxFlex="100">
+    <app-chart-card>
+      <app-case-distribution-chart chart-content></app-case-distribution-chart>
+      <app-date-range-picker date-range></app-date-range-picker>
+    </app-chart-card>
+  </div>
+
+  <!-- Turn Around Time chart -->
+  <div class="matero-col" fxFlex="100" fxFlex.gt-md="50">
+    <app-chart-card *ngIf="isCategorySelected">
+      <p title>Turn Around Time for {{ selectedCategory }}</p>
+      <app-day-range-dialog filter-button></app-day-range-dialog>
+      <app-turn-around-time-chart chart-content></app-turn-around-time-chart>
+    </app-chart-card>
+  </div>
+
+  <!-- Special Request Chart -->
+  <div
+    class="matero-col"
+    fxFlex="100"
+    fxFlex.gt-md="50"
+    *ngIf="isDurationSelected"
+  >
+    <app-chart-card>
+      <p title>
+        Special requests for
+        {{ selectedCategory }} for the turn around time range
+        {{ selectedDuration[0] }} - {{ selectedDuration[1] }} days
+      </p>
+      <app-special-request-chart chart-content> </app-special-request-chart>
+    </app-chart-card>
+  </div>
+</div>

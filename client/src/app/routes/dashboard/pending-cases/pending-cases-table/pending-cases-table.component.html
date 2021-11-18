@@ -1,0 +1,14 @@
+<div>
+     <mtx-grid [data]="list"
+          [columns]="columns"
+          [length] = "total"
+          [loading]="isLoading"
+          [pageOnFront]="false"
+          [showPaginator] = "true"
+          [pageIndex]="0"
+          [pageSize]="10"
+          (page) = getNextPage($event)>
+     </mtx-grid>
+</div>
+
+
